@@ -42,9 +42,10 @@ A Backend API for a Library Mangement system  : Created with the Vertx Polygot F
 - SelfId : String ;
 - Books : List<String> ;
 - The Book Model is described as follows ;
--AuthorFirst : String ;
--AuthorLast : String ;
--SelfId : String ;
--Genre :String ;
--Title : String  ;
+- 
+- AuthorFirst : String ;
+- AuthorLast : String ;
+- SelfId : String ;
+- Genre :String ;
+- Title : String  ;
   
