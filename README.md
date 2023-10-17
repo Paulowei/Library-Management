@@ -48,4 +48,17 @@ A Backend API for a Library Mangement system  : Created with the Vertx Polygot F
 - SelfId : String ;
 - Genre :String ;
 - Title : String  ;
-  
+
+- To use the TestClient.java file in the Test Folder -- 
+ - Enter the following command  ;   
+ - Compile TestClient with Javac TestClient.java ; 
+ - Send A HttpRequest With -- 
+- java TestClient METHOD PATH  REQUESTBODY ; 
+-  java TestClient  PUT http://localhost:8060/library/authors/insert  {\"FirstName\":\"Micheal\",\"LastName\":\"Grant\",\"Books\":[\"BZRK\",\"Plague\",\"Fear\"]}
+-  java TestClient  PUT http://localhost:8040/library/books/insert  {\"Genre\":\"Sci-Fi\",\"Title\":\"Fear\",\"AuthorFirst\":\"Micheal\",\"AuthorLast\":\"Grant\"}
+-  java TestClient  GET http://localhost:8040/library/books/find/all  {\"Genre\":\"Sci-Fi\",\"Title\":\"Fear\",\"AuthorFirst\":\"Micheal\",\"AuthorLast\":\"Grant\"}
+-  java TestClient  GET http://localhost:8060/library/authors/find/all {\"FirstName\":\"Micheal\",\"LastName\":\"Grant\",\"Books\":[\"BZRK\",\"Plague\",\"Fear\",\"Light\"]}
+- java TestClient  POST http://localhost:8060/library/authors/update/lastname/Grant  {\"FirstName\":\"Micheal\",\"LastName\":\"Grant\",\"Books\":[\"BZRK\",\"Plague\",\"Fear\",\"Light\"]}
+-  java TestClient  POST http://localhost:8040/library/books/update/title/Fear  {\"Genre\":\"Escapism\",\"Title\":\"Fear\",\"AuthorFirst\":\"Micheal\",\"AuthorLast\":\"Grant\"}
+-   java TestClient  GET http://localhost:8040/library/books/find/all  {\"Genre\":\"Sci-Fi\",\"Title\":\"Fear\",\"AuthorFirst\":\"Micheal\",\"AuthorLast\":\"Grant\"}
+-  java TestClient  GET http://localhost:8060/library/authors/find/all {\"FirstName\":\"Micheal\",\"LastName\":\"Grant\",\"Books\":[\"BZRK\",\"Plague\",\"Fear\",\"Light\"]}   
