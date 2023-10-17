@@ -229,6 +229,7 @@ public class AuthorVerticle extends AbstractVerticle  {
      //     Future<JsonObject> needs = services.insertAuthor2(current,indicator) ;
      //              long[]  indicator = new long[]{-4l,-3l}  ;   ,indicator
      //       if(indicator[0]!=-4l){     }   // }  }   // String patterns =  String.valueOf(indicator[0]) ;
+       //   Utilities.writeResponse(frames.response(),means.cause().toString(),DECLINED,true,true) ;
     public void serveRoutes1() {
         Route paths  = router.route() ;
         paths.method(HttpMethod.PUT) ;
@@ -252,16 +253,16 @@ public class AuthorVerticle extends AbstractVerticle  {
                                         public void handle(AsyncResult<String> means){
                                     if(means.succeeded()){
                                   resource.put("SelfId",means.result()) ;
-                                    Utilities.writeResponse(frames.response(),resource.encode(),ACCEPTED,true,true) ;
-                          } else {    Utilities.writeResponse(frames.response(),means.cause().toString(),DECLINED,true,true) ;
+                                   Utilities.resolve (frames.response(),replies[1],resource,ACCEPTED,true,true,true) ;
+                          } else {   Utilities.resolve (frames.response(),means.cause( ).toString( ),new JsonObject( ),ACCEPTED,true,true,false) ;
                             Utilities.DefaultHandler(means.cause()) ;    } }} ) ;
                             } }
                         }
                      ) ;
                 } }   ) ; }
           //  }
-    //    ) ;
-  //  }
+    //    ) ;    //    Utilities.writeResponse(frames.response(),resource.encode(),ACCEPTED,true,true) ;
+  //  }  
       //  ,JsonObject[] returns ,boolean[] notice   // ,patterns,
       //     Author[]  trays = new Author[]{null,null,null} ;
       //           if(trays[0]!=null){            }
