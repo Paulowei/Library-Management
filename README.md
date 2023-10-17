@@ -18,33 +18,33 @@ A Backend API for a Library Mangement system  : Created with the Vertx Polygot F
 - Inorder to update a Book document , send a GET request to  ;
 - The base route for the API is http://localhost:8060 or http://localhost:8040  ;
 - The port for the BookServices server is 8040  ,while the port or the AuthorServices server  is 8060 ; 
-- /library/books/update/title/:cores GET
--  /library/books/find/all POST ; 
--  /library/books/delete/:links DELETE ;
--  /library/books/find/genre/:cores  GET ;   
--  /library/books/update/identity/:id  POST ;
--  /library/books/insert  PUT ;
--  /library/books/find/title/:portion  GET ;
--  /library/books/find/identity/:id  GET ;
+- http://localhost:8040/library/books/update/title/:cores GET
+- http://localhost:8040/library/books/find/all POST ; 
+- http://localhost:8040/library/books/delete/:links DELETE ;
+- http://localhost:8040/library/books/find/genre/:cores  GET ;   
+- http://localhost:8040/library/books/update/identity/:id  POST ;
+-  http://localhost:8040/library/books/insert  PUT ;
+- http://localhost:8040/library/books/find/title/:portion  GET ;
+- http://localhost:8040/library/books/find/identity/:id  GET ;
 
--  /library/authors/update/lastname/:sample  POST  ;
- -  /library/authors/find/lastname/:data  GET  ; 
- -  /library/authors/update/firstname/:clone  POST ;
- -  /library/authors/find/all  GET  ;
- -   /library/authors/find/identity/:digit  GET  ;
- -   /library/authors/insert POST  ;
- -   /library/authors/delete/identity/:id DELETE ;
- -   /library/authors/find/firstname/:title   GET ;
- -   /library/authors/update/identity/:id  POST ;
+-    http://localhost:8060/library/authors/update/lastname/:sample  POST  ;
+ -    http://localhost:8060/library/authors/find/lastname/:data  GET  ; 
+ -    http://localhost:8060/library/authors/update/firstname/:clone  POST ;
+ -    http://localhost:8060/library/authors/find/all  GET  ;
+ -     http://localhost:8060/library/authors/find/identity/:digit  GET  ;
+ -   http://localhost:8060/library/authors/insert POST  ;
+ -     http://localhost:8060/library/authors/delete/identity/:id DELETE ;
+ -     http://localhost:8060/library/authors/find/firstname/:title   GET ;
+ -     http://localhost:8060/library/authors/update/identity/:id  POST ;
  - The Author Model is described As Follows ;
  - FirstName : String ;
 - LastName : String  ;
 - SelfId : String ;
 - Books : List<String> ;
 - The Book Model is described as follows ;
-  -AuthorFirst : String ;
-  -AuthorLast : String ;
-  -SelfId : String ;
-  -Genre :String ;
-  -Title : String  ;
+-AuthorFirst : String ;
+-AuthorLast : String ;
+-SelfId : String ;
+-Genre :String ;
+-Title : String  ;
   
