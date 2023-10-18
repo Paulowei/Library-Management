@@ -1,17 +1,17 @@
 # Library-Management
 A Backend API for a Library Mangement system  : Created with the Vertx Polygot Framework  
 
--The web app replies on vertx-web ,vertx-core , and vertx-mongo-client  dependencies ;   
--Inorder to run the applicaton  ; 
--Change directory to the base directory of the project ; 
--Compile the project with the following command ; 
--mvn package ; 
--Run the following command ; 
--mvn  package ; 
--To start the server,run the following commands ;
--mvn vertx:initialize
--mvn vertx:run  
--mvn  exec:java  
+- The web app replies on vertx-web ,vertx-core , and vertx-mongo-client  dependencies ;   
+- Inorder to run the applicaton  ; 
+- Change directory to the base directory of the project ; 
+- Compile the project with the following command ; 
+- mvn package ; 
+- Run the following command ; 
+- mvn  package ; 
+- To start the server,run the following commands ;
+- mvn vertx:initialize
+- mvn vertx:run  
+- mvn  exec:java  
 
 -The source files remain in the src/main/java/com/moderneinstein/web/vertx folder ; 
 -Send an API request to any of the following rest endpoints to  make changes to the underlying database ; 
