@@ -16,8 +16,8 @@ A Backend API for a Library Mangement system  : Created with the Vertx Polygot F
 -The source files remain in the src/main/java/com/moderneinstein/web/vertx folder ; 
 - The base route for the API is http://localhost:8060 or http://localhost:8040  ;
 - The port for the BookServices server is 8040  ,while the port or the AuthorServices server  is 8060 ;
--  Inorder to update a Book document , send a GET request to  ;
-- Send an API request to any of the following REST endpoints to  make changes to the underlying database ; 
+- Send an API request to any of the following REST endpoints to  make changes to the underlying database ;
+-  Inorder to update a Book document , send a POST request to  ;  
 - http://localhost:8040/library/books/update/title/:cores POST
 - http://localhost:8040/library/books/find/all GET; 
 - http://localhost:8040/library/books/delete/:links DELETE ;
