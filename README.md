@@ -42,7 +42,7 @@ A Backend API for a Library Mangement system  : Created with the Vertx Polygot F
 - SelfId : String ;
 - Books : List<String> ;
 - The Book Model is described as follows ;
-- 
+- https://www.mongodb.com/try/download/community
 - AuthorFirst : String ;
 - AuthorLast : String ;
 - SelfId : String ;
@@ -53,7 +53,12 @@ A Backend API for a Library Mangement system  : Created with the Vertx Polygot F
  - Enter the following command  ;   
  - Compile TestClient with Javac TestClient.java ; 
  - Send A HttpRequest With -- 
-- java TestClient METHOD PATH  REQUESTBODY ; 
+- java TestClient METHOD PATH  REQUESTBODY ;
+- Do not forget to escape all  double quotes  with a back-slash(\") ;
+- This is very important to represent JSON Objects in POST and PUT API requests ;
+- Install MongoDB and Run MongoD in the background with this command  ;
+-   mongod.exe --dbpath="path/to/database"  ;
+-   https://www.mongodb.com/try/download/community 
 -  java TestClient  PUT http://localhost:8060/library/authors/insert  {\"FirstName\":\"Micheal\",\"LastName\":\"Grant\",\"Books\":[\"BZRK\",\"Plague\",\"Fear\"]}
 -  java TestClient  PUT http://localhost:8040/library/books/insert  {\"Genre\":\"Sci-Fi\",\"Title\":\"Fear\",\"AuthorFirst\":\"Micheal\",\"AuthorLast\":\"Grant\"}
 -  java TestClient  GET http://localhost:8040/library/books/find/all  {\"Genre\":\"Sci-Fi\",\"Title\":\"Fear\",\"AuthorFirst\":\"Micheal\",\"AuthorLast\":\"Grant\"}
@@ -61,4 +66,5 @@ A Backend API for a Library Mangement system  : Created with the Vertx Polygot F
 - java TestClient  POST http://localhost:8060/library/authors/update/lastname/Grant  {\"FirstName\":\"Micheal\",\"LastName\":\"Grant\",\"Books\":[\"BZRK\",\"Plague\",\"Fear\",\"Light\"]}
 -  java TestClient  POST http://localhost:8040/library/books/update/title/Fear  {\"Genre\":\"Escapism\",\"Title\":\"Fear\",\"AuthorFirst\":\"Micheal\",\"AuthorLast\":\"Grant\"}
 -   java TestClient  GET http://localhost:8040/library/books/find/all  {\"Genre\":\"Sci-Fi\",\"Title\":\"Fear\",\"AuthorFirst\":\"Micheal\",\"AuthorLast\":\"Grant\"}
--  java TestClient  GET http://localhost:8060/library/authors/find/all {\"FirstName\":\"Micheal\",\"LastName\":\"Grant\",\"Books\":[\"BZRK\",\"Plague\",\"Fear\",\"Light\"]}   
+-  java TestClient  GET http://localhost:8060/library/authors/find/all {\"FirstName\":\"Micheal\",\"LastName\":\"Grant\",\"Books\":[\"BZRK\",\"Plague\",\"Fear\",\"Light\"]}
+
