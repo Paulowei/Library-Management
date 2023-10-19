@@ -14,12 +14,12 @@ A Backend API for a Library Mangement system  : Created with the Vertx Polygot F
 - mvn  exec:java  
 
 -The source files remain in the src/main/java/com/moderneinstein/web/vertx folder ; 
--Send an API request to any of the following rest endpoints to  make changes to the underlying database ; 
-- Inorder to update a Book document , send a GET request to  ;
 - The base route for the API is http://localhost:8060 or http://localhost:8040  ;
-- The port for the BookServices server is 8040  ,while the port or the AuthorServices server  is 8060 ; 
-- http://localhost:8040/library/books/update/title/:cores GET
-- http://localhost:8040/library/books/find/all POST ; 
+- The port for the BookServices server is 8040  ,while the port or the AuthorServices server  is 8060 ;
+-  Inorder to update a Book document , send a GET request to  ;
+- Send an API request to any of the following REST endpoints to  make changes to the underlying database ; 
+- http://localhost:8040/library/books/update/title/:cores POST
+- http://localhost:8040/library/books/find/all GET; 
 - http://localhost:8040/library/books/delete/:links DELETE ;
 - http://localhost:8040/library/books/find/genre/:cores  GET ;   
 - http://localhost:8040/library/books/update/identity/:id  POST ;
@@ -33,7 +33,7 @@ A Backend API for a Library Mangement system  : Created with the Vertx Polygot F
  -    http://localhost:8060/library/authors/find/all  GET  ;
  -     http://localhost:8060/library/authors/find/identity/:digit  GET  ;
  -   http://localhost:8060/library/authors/insert POST  ;
- -     http://localhost:8060/library/authors/delete/identity/:id DELETE ;
+ -     http://localhost:8060/library/authors/delete/identity/:id  DELETE ;
  -     http://localhost:8060/library/authors/find/firstname/:title   GET ;
  -     http://localhost:8060/library/authors/update/identity/:id  POST ;
  - The Author Model is described As Follows ;
@@ -57,8 +57,9 @@ A Backend API for a Library Mangement system  : Created with the Vertx Polygot F
 - Do not forget to escape all  double quotes  with a back-slash(\") ;
 - This is very important to represent JSON Objects in POST and PUT API requests ;
 - Install MongoDB and Run MongoD in the background with this command  ;
--   mongod.exe --dbpath="path/to/database"  ;
--   https://www.mongodb.com/try/download/community 
+-   https://www.mongodb.com/try/download/community
+-    mongod.exe --dbpath="path/to/database"  ;
+-    
 -  java TestClient  PUT http://localhost:8060/library/authors/insert  {\"FirstName\":\"Micheal\",\"LastName\":\"Grant\",\"Books\":[\"BZRK\",\"Plague\",\"Fear\"]}
 -  java TestClient  PUT http://localhost:8040/library/books/insert  {\"Genre\":\"Sci-Fi\",\"Title\":\"Fear\",\"AuthorFirst\":\"Micheal\",\"AuthorLast\":\"Grant\"}
 -  java TestClient  GET http://localhost:8040/library/books/find/all  {\"Genre\":\"Sci-Fi\",\"Title\":\"Fear\",\"AuthorFirst\":\"Micheal\",\"AuthorLast\":\"Grant\"}
